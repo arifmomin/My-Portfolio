@@ -1602,15 +1602,14 @@ html {
     padding-bottom: 50px;
     background: var(--Background_color);
 }
-
-.portfolio_heading h2{
+.portfolio_title_text{
     font-size: 20px;
     font-weight: 400;
     font-family: var(--Croissant_one);
     color: var(--Brand_color);
     text-align: center;
 }
-.portfolio_heading h3{
+.portfolio_title_scnd_text{
     font-size: 36px;
     font-weight: 700;
     font-family: var(--Croissant_one);
@@ -1619,17 +1618,11 @@ html {
     margin-top: 20px;
     margin-bottom: 80px;
 }
-.portfolio_heading h3 span{
+.portfolio_title_scnd_text span{
     color: var(--Brand_color);
 }
-.portfolio_row{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 70px;
-}
 .portfolio_col{
-    width: 550px;
+    width: 100%;
     padding: 25px 25px 30px 25px;
     border-radius: 20px;
     background: var(--Background_color);
@@ -1639,7 +1632,7 @@ html {
     background: url(../image/resturant_website.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 100%; 
     height: 600px;
     border-radius: 20px;
     transition: all linear 5s;
@@ -1652,7 +1645,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.portfolio_col h4{
+.portfolio_img_head{
     font-size: 26px;
     font-weight: 600;
     font-family: var(--IBM_Plex-serif);
@@ -1664,11 +1657,10 @@ html {
 /* ------------------------portfolio part end--------------------- */
 /* ==============================lattest work start=============================== */
 #lattest_work{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 80px 0;
     background: var(--Background_color);
 }
-.lattest_heading h2{
+.lattest_title_head{
     font-size: 36px;
     font-weight: 700;
     font-family: var(--Croissant_one);
@@ -1677,10 +1669,10 @@ html {
     position: relative;
     margin-bottom: 70px;
 }
-.lattest_heading h2 span{
+.lattest_title_head span{
     color: var(--Brand_color);
 }
-.lattest_heading h2::before{
+.lattest_title_head::before{
     content: '\f04a';
     position: absolute;
     font-family: 'Font Awesome 6 Free';
@@ -1689,7 +1681,7 @@ html {
     top: 12px;
     left: 40%;
 }
-.lattest_heading h2::after {
+.lattest_title_head::after {
     content: '\f04e';
     position: absolute;
     font-family: 'Font Awesome 6 Free';
@@ -1698,13 +1690,6 @@ html {
     top: 13px;
     right: 40%;
 }
-.lattest_row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-}
 .lattest_col{
     padding: 20px;
     background: var(--Background_color);
@@ -1712,8 +1697,7 @@ html {
     box-shadow: var(--box_shadow);
 }
 .lattest_col a img {
-    width: 350px !important;
-    height: 215px !important;
+    height: 230px !important;
     border-radius: 10px;
     z-index: 99;
 }
@@ -1765,13 +1749,13 @@ html {
     top: 0%;
     transition-delay: .3s;
 }
-.lettest_img_text h2{
+.lettest_img_text_head{
     font-size: 16px;
     font-weight: 400;
     font-family: var(--poopins);
     color: var(--paragraph);
 }
-.lettest_img_text p{
+.lettest_img_text_head_summery{
     font-size: 20px;
     font-weight: 600;
     font-family: var(--poopins);
@@ -1781,18 +1765,17 @@ html {
 /* ----------------------------lattest work end------------------------------- */
 /* ========================service part start==================== */
 #Service{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 80px ;
     background: var(--Background_color);
 }
-.service_heading h2{
+.service_title_head{
     font-size: 20px;
     font-weight: 500;
     font-family: var(--Croissant_one);
     color: var(--Brand_color);
     text-align: center;
 }
-.service_heading h3{
+.service_title_summery{
     font-size: 36px;
     font-weight: 700;
     font-family: var(--Croissant_one);
@@ -1801,10 +1784,10 @@ html {
     margin-top: 20px;
     position: relative;
 }
-.service_heading h3 span{
+.service_title_summery span{
     color: var(--Brand_color);
 }
-.service_heading h3::after {
+.service_title_summery::after {
     content: '';
     position: absolute;
     width: 100px;
@@ -1813,50 +1796,45 @@ html {
     bottom: -45%;
     left: 46%;
 }
-.service_row{
-    display: flex;
-    flex-wrap: wrap;
+.ServicePart_row{
+    margin-top: 120px;
     justify-content: center;
-    align-items: center;
-    gap: 80px;
-    margin-top: 90px;
+    gap: 50px;
 }
-.service_row .service_col{
-    width: 450px;
-    padding: 30px 40px 35px 30px;
+.service_col{
+    padding: 40px 40px 40px 40px;
     background: var(--Background_color);
     box-shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
     transition: all linear .3s;
 }
-.service_row .service_col:hover{
+.service_col:hover{
     background: var(--liniar_gradiant);
 }
-.service_head h3{
+.service_head_text{
     font-size: 28px;
     font-weight: 700;
     font-family: var(--IBM_Plex-serif);
     color: #fff;
 }
-.service_head h3 span{
+.service_head_text span{
     color: var(--Brand_color);
 }
-.service_head p{
-    width: 400px;
+.service_head_text_summery{
+    max-width: 440px;
     font-size: 16px;
     font-weight: 400;
     font-family: var(--poopins);
     color: #fff;
-    margin-top: 30px;
-    margin-bottom: 25px;
+    margin: 30px 0 25px;
 }
-.service_list ul li{
+.service_list .service_item{
     margin-bottom: 12px;
 }
-.service_list ul li i{
+.service_item i{
     font-size: 16px;
     color: #fff;
 }
-.service_list ul li span{
+.service_item span{
     font-size: 16px;
     font-weight: 400;
     font-family: var(--IBM_Plex-serif);
@@ -1889,7 +1867,7 @@ html {
     background: rgba(0, 0, 0, 0.70);
     z-index: -1;
 }
-.hire_heading h2{
+.hire_title_head{
     font-size: 36px;
     font-weight: 700;
     font-family: var(--IBM_Plex-serif);
@@ -1954,18 +1932,13 @@ html {
     visibility: visible;
     opacity: 1;
 }
-
 /* -----------------------------hire me end---------------------------- */
-
-
-
 /* ========================client part start==================== */
 #client_say{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
     background: var(--Background_color);
 }
-.client_say h2{
+.client_say_title_head{
     font-size: 16px;
     font-weight: 400;
     font-family: var(--Croissant_one);
@@ -1973,7 +1946,7 @@ html {
     text-align: center;
 
 }
-.client_say h3{
+.client_say_title_summery{
     font-size: 36px;
     font-weight: 700;
     font-family: var(--Croissant_one);
