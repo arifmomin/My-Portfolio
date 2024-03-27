@@ -10,13 +10,16 @@
     outline: 0;
     box-sizing: border-box;
 }
-ul,ol{
+ul,ol,li{
     list-style: none;
 }
-h1,h2,h3,h4,h5,h6,p,ul,ol{
+h1,h2,h3,h4,h5,h6,p,ul,ol,li,div,img,span,a{
     padding: 0%;
     margin: 0%;
     outline: 0;
+}
+img{
+    vertical-align: middle;
 }
 a{
     text-decoration: none;
@@ -35,6 +38,7 @@ html {
     --liniar_gradiant: linear-gradient(to right bottom, #212428, #16181c);
     --Brand_color:#FFB400;
     --paragraph:#C4CFDE;
+    --White:#FFFFFF;
     --box_shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
 
 }
@@ -325,15 +329,11 @@ html {
     width: 100%;
     position: absolute;
 }
-.bg-body-tertiary {
-    background-color: transparent;
-}
 .navbar-brand{
     z-index: 99;
 }
 .navbar-brand img {
-    width: 100px !important;
-    height: 60px !important;
+    max-width: 120px;
 }
 .menu_bar .menu_list{
     gap: 35px;
@@ -528,7 +528,7 @@ html {
     color: var(--paragraph);
 }
 .banner_heading h1 {
-    width: 650px;
+    max-width: 650px;
     font-size: 64px;
     font-weight: 700;
     font-family: var(--Croissant_one);
@@ -543,7 +543,7 @@ html {
     position: relative;
 }
 .word {
-    width: 600px;
+    max-width: 600px;
     position: absolute;
     top: 123px;
     left: 10%;
@@ -554,7 +554,7 @@ html {
     font-family: var(--Croissant_one);
 }
 .banner_heading p {
-    width: 630px;
+    max-width: 630px;
     font-size: 16px;
     font-weight: 400;
     font-family: var(--IBM_Plex-serif);
@@ -571,7 +571,7 @@ html {
     text-transform: uppercase;
 }
 .banner_button a {
-    width: 180px;
+    max-width: 180px;
     height: 50px;
     border-radius: 12px;
     background: transparent;
@@ -632,18 +632,14 @@ html {
     justify-content: end;
 }
 .banner_img img {
-    width: 370px !important;
-    height: 450px !important;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
-    border: 10px solid var(--Brand_color);
+    max-width: 370px !important;
+    max-height: 450px !important;
+    border-radius: 0 40px 0 40px;
     transition: all linear .3s;
+    border: 10px solid var(--Brand_color);
 }
 .banner_img img:hover{
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-radius: 40px 0 40px 0;
 }
 .banner_secound_heading{
     display: flex;
@@ -849,64 +845,61 @@ html {
 }
 /* ------------------------banner part end--------------------- */
 /* ========================about part start==================== */
-#about{
-    padding-top: 50px;
-    padding-bottom: 50px;
+#aboutPart{
+    padding: 50px 0;
     background: var(--Background_color);
 }
-.about_row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-.about_heading h2{
+.about_title_heading{
     font-size: 36px;
     font-weight: 700;
+    line-height: 70px;
     font-family: var(--Croissant_one);
-    color: #fff;
+    color: var(--White);
     text-align: center;
-    margin-bottom: 70px;
 }
-.about_heading h2 span{
+.about_title_heading span{
     color: var(--Brand_color);
 }
-.about_col h3{
+.aboutLeft_title{
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 600;
     font-family: var(--IBM_Plex-serif);
-    color: #fff;
-    margin-bottom: 30px;
+    color: var(--White);
 }
-.about_list{
+.informationLeft_list{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 60px;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
 }
-.about_list ul li{
+.informationLeft_item{
     font-size: 18px;
     font-weight: 500;
     font-family: var(--IBM_Plex-serif);
     color: var(--paragraph);
-    margin-top: 15px;
 }
-.about_list .highlight{
-    color: var(--Brand_color);
-}
-
-.about_list ul li span{
-    margin-left: 12px;
+.informationLeft_item_span_link{
+    font-size: 18px;
     font-weight: 600;
-    color: #fff;
-    position: relative;
-    cursor: pointer;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--White);
     transition: all linear .3s;
 }
-.about_list ul li span:hover{
+.informationLeft_item_span_link:hover{
     color: var(--Brand_color);
 }
-.about_list ul li span::after {
+.informationLeft_item_span{
+    font-weight: 600;
+    color: var(--White);
+    margin-left: 10px;
+    position: relative;
+    transition: all linear .3s;
+    cursor: pointer;
+}
+.informationLeft_item_span:hover{
+    color: var(--Brand_color);
+}
+.informationLeft_item_span::after {
     position: absolute;
     content: '';
     width: 0%;
@@ -917,11 +910,43 @@ html {
     visibility: hidden;
     transition: all linear .3s;
 }
-.about_list ul li span:hover::after{
+.informationLeft_item_span:hover::after{
     width: 100%;
     visibility: visible;
 }
-
+.informationLeft_item_heighlight{
+    color: var(--Brand_color);
+}
+.aboutPartRight_col{
+    padding: 25px 40px 38px 45px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #1E2024 0%, #23272B 100%);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    transition: all linear .3s;
+    cursor: pointer;
+}
+.aboutPartRight_col:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(to right bottom, #212428, #16181c);
+}
+.aboutPartRight_col_counter{
+    font-size: 64px;
+    font-weight: 700;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--White);
+    transition: all linear .3s;
+}
+.aboutPartRight_col:hover .aboutPartRight_col_counter{
+    color: var(--Brand_color);
+}
+.aboutPartRight_col_summery{
+    max-width: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--poopins);
+    color: var(--White);
+    margin-left: auto;
+}
 .download_button .btn_slide{
     width: 230px;
     height: 60px;
@@ -984,63 +1009,13 @@ html {
     left: 19%;
     opacity: 1;
 }
-.counter_row {
-	display: flex;
-	justify-content: end;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 20px;
-	width: 50%;
-}
-.counter_col {
-    width: 280px;
-    padding: 25px 40px 38px 45px;
-    border-radius: 10px;
-    background: linear-gradient(145deg, #1E2024 0%, #23272B 100%);
-    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-    transition: all linear .3s;
-}
-.counter_col:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(to right bottom, #212428, #16181c);
-}
-.counter_col h3{
-    font-size: 64px;
-    font-weight: 700;
-    font-family: var(--IBM_Plex-serif);
-    color: #fff;
-    transition: all linear .3s;
-}
-.counter_col:hover h3{
-    color: var(--Brand_color);
-}
-.counter_col p{
-    font-size: 16px;
-    font-weight: 400;
-    font-family: var(--IBM_Plex-serif);
-    color: #fff;
-    margin-top: 10px;
-    margin-left: 85px;
-    position: relative;
-}
-.counter_col p::after {
-    position: absolute;
-    content: '';
-    width: 45px;
-    height: 1px;
-    background: #fff;
-    top: 23%;
-    left: -70%;
-}
 /* ------------------------about part end--------------------- */
 /* ========================resume part start==================== */
-#resume{
-    padding-top: 50px;
-    padding-bottom: 50px;
+#resumePart{
+    padding: 80px 0;
     background: var(--Background_color);
-    color: #fff;
 }
-.resume_heading h2{
+.resume_heading_title{
     font-size: 36px;
     font-weight: 700;
     font-family: var(--Croissant_one);
@@ -1079,42 +1054,37 @@ html {
     box-shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
     color: var(--Brand_color);
 }
-.resume_row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.fade:not(.show) {
+    display: none;
 }
-.resume_col .resume_heading h3{
+.resume_heading h3{
     font-size: 26px;
     font-weight: 500;
     font-family: var(--Croissant_one);
     color: #fff;
     margin-bottom: 50px;
 }
-.resume_box_colam {
+.resume_box_row {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	gap: 40px;
+    row-gap: 30px;
 }
-.resume_box_colam::after {
+.resume_box_row::after {
 	position: absolute;
 	content: '';
 	top: 0%;
-	left: -29.23px;
+	left: -17.23px;
 	width: 5px;
 	height: 100%;
 	background: #17191C;
 	z-index: 0;
 }
 .resume_box_col{
-    width: 500px;
+    width: 100%;
     padding: 40px 25px 30px 30px;
     background: linear-gradient(#1E2024 , #23272B);
     box-shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
     transition: all linear 4s;
     position: relative;
-
 }
 .resume_box_col:hover{
     background: linear-gradient(to right bottom, #212428, #16181c);
@@ -1144,18 +1114,13 @@ html {
 .resume_box_col:hover::before{
     background: var(--Brand_color);
 }
-.reasume_box_heading_row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.reasume_box_heading_row .box_heading_col h4{
+.box_heading_col_head{
     font-size: 20px;
     font-weight: 500;
     font-family: var(--IBM_Plex-serif);
     color: #fff;
 }
-.reasume_box_heading_row .box_heading_col h5{
+.box_heading_col_clg{
     font-size: 14px;
     font-weight: 400;
     font-family: var(--poopins);
@@ -1163,44 +1128,36 @@ html {
     margin-top: 15px;
 }
 .box_heading_col .gpa{
-    width: 60px;
-    height: 35px;
+    max-width: 70px;
+    padding: 10px 10px;
     border-radius: 3px;
     background: linear-gradient(#1E2024 , #23272B);
     box-shadow: 10px 10px 19px #1C1E22, -0px -0px 10px #262A2E;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 12px;
     font-weight: 400;
     font-family: var(--IBM_Plex-serif);
     color: var(--Brand_color);
     cursor: pointer;
 }
-.resume_box_heading p{
+.box_heading_col_summery{
+    max-width: 445px;
     font-size: 16px;
     font-weight: 400;
     font-family: var(--poopins);
     color: var(--paragraph);
     margin-top: 40px;
-    width: 445px;
 }
-.professional_row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.professional_heading h2{
+.professional_col_title{
     font-size: 26px;
     font-weight: 400;
     font-family: var(--Croissant_one);
     color: #fff;
     margin-bottom: 50px;
 }
-.professional_heading h2 span{
+.professional_col_title span{
     color: var(--Brand_color);
 }
-.professional_skill p{
+.professional_skill_summery{
     font-size: 16px;
     font-weight: 400;
     font-family: var(--IBM_Plex-serif);
@@ -1209,7 +1166,7 @@ html {
     margin-bottom: 10px;
 }
 .design_skill{
-    width: 550px;
+    width: 100%;
     height: 13px;
     border-radius: 10px;
     background: #111010;
@@ -1250,7 +1207,7 @@ html {
         left: 0%;
     }
     to{
-        left: 72%;
+        left: 74%;
     }  
 }
 .figma .design_skill::after{
@@ -1267,7 +1224,7 @@ html {
 }
 @keyframes figma_text{
     to{
-        left: 82%;
+        left: 84%;
     }  
 }
 .adobe .design_skill::after{
@@ -1284,7 +1241,7 @@ html {
 }
 @keyframes adobe_text{
     to{
-        left: 58%;
+        left: 59%;
     }  
 }
 .Illustrator .design_skill::after{
@@ -1301,7 +1258,7 @@ html {
 }
 @keyframes Illustrator_text{
     to{
-        left: 67%;
+        left: 69%;
     }  
 }
 .design .design_skill::after{
@@ -1318,7 +1275,7 @@ html {
 }
 @keyframes design_text{
     to{
-        left: 78%;
+        left: 79%;
     }  
 }
 /* =============Development Skill part=================*/
@@ -1353,7 +1310,7 @@ html {
 }
 @keyframes css_text{
     to{
-        left: 87%;
+        left: 89%;
     }  
 }
 .java .design_skill::after{
@@ -1370,7 +1327,7 @@ html {
 }
 @keyframes java_text{
     to{
-        left: 77%;
+        left: 79%;
     }  
 }
 .react .design_skill::after{
@@ -1387,7 +1344,7 @@ html {
 }
 @keyframes react_text{
     to{
-        left: 72%;
+        left: 74%;
     }  
 }
 .node .design_skill::after{
@@ -1404,16 +1361,11 @@ html {
 }
 @keyframes node_text{
     to{
-        left: 62%;
+        left: 64%;
     }  
 }
 /* ------------- Development Skill end-----------------*/
-.language_row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.language_col .language_heading p {
+.language_heading_summery {
     width: 534px;
     font-size: 16px;
     font-weight: 400;
@@ -1520,7 +1472,7 @@ html {
 }
 @keyframes english_text{
     to{
-        left: 72%;
+        left: 74%;
     }  
 }
 .hindi .design_skill::after{
@@ -1537,7 +1489,7 @@ html {
 }
 @keyframes hindi_text{
     to{
-        left: 87%;
+        left: 89%;
     }  
 }
 .urdu .design_skill::after{
@@ -1554,20 +1506,18 @@ html {
 }
 @keyframes urdu_text{
     to{
-        left: 72%;
+        left: 74%;
     }  
 }
 /* --------------language skill---------------- */
 /* ===============what i do start================= */
 .what_row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
+    row-gap: 50px;
+    column-gap: 30px;
 }
 .what_col{
-    width: 500px;
-    padding: 40px 70px 53px 30px;
+    width: 100%;
+    padding: 40px 70px 53px 40px;
     background: transparent;
     box-shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
     transition: all linear .3s;
@@ -1593,26 +1543,26 @@ html {
     right: 34%;
     bottom: -2px;
 }
-.what_col:nth-child(2):after {
+.what_col_two::after{
     content: '\f121';
 }
-.what_col:nth-child(2):hover::after {
-    font-size: 200px;
-    right: 24%;
-    bottom: 9px;
-}
-.what_col:nth-child(3):after {
-    content: '\e163';
-}
-.what_col:nth-child(3):hover::after {
+.what_col_two:hover::after {
     font-size: 200px;
     right: 27%;
     bottom: 9px;
 }
-.what_col:nth-child(4):after {
+.what_col_three::after {
+    content: '\e163';
+}
+.what_col_three:hover::after {
+    font-size: 200px;
+    right: 27%;
+    bottom: 9px;
+}
+.what_col_four::after {
     content: '\f017';
 }
-.what_col:nth-child(4):hover::after {
+.what_col_four:hover::after {
     font-size: 200px;
     right: 27%;
     bottom: 9px;
@@ -1633,20 +1583,18 @@ html {
     background: var(--Brand_color);
     color: #fff;
 }
-.what_heaidng h3{
+.what_heaidng_text{
     font-size: 22px;
     font-weight: 500;
     font-family: var(--IBM_Plex-serif);
     color: #fff;
-    margin-top: 25px;
+    margin: 25px 0 25px;
 }
-.what_heaidng p{
-    width: 400px;
+.what_heaidng_summery{
     font-size: 16px;
     font-weight: 400;
     font-family: var(--IBM_Plex-serif);
     color: var(--paragraph);
-    margin-top: 25px;
 }
 /* ------------------------resume part end--------------------- */
 /* ========================portfolio part start==================== */
@@ -1712,6 +1660,7 @@ html {
     text-align: center;
     margin-top: 10px;
 }
+
 /* ------------------------portfolio part end--------------------- */
 /* ==============================lattest work start=============================== */
 #lattest_work{

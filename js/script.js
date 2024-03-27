@@ -100,9 +100,9 @@ $(document).ready(function () {
   wordflick();
 });
 
-$('.counter').counterUp({
+$('.aboutPartRight_counter').counterUp({
     delay: 10,
-    time: 2000,
+    time: 1000,
   });
   // ==============================text animation==========================
   const elts = {
