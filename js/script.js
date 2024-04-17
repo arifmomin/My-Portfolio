@@ -42,7 +42,7 @@ back_to_top.addEventListener('click',function(){
 
 // ========================banner part slider=================
 $('.banner_row').slick({
-  autoplay: true,
+  // autoplay: true,
   dots: true,
   infinite: true,
   speed: 1000,
@@ -185,7 +185,7 @@ $('.aboutPartRight_counter').counterUp({
     $('.client_say_row').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 2000,
       prevArrow:'<i class="fa-solid fa-angle-left prev"></i>',
       nextArrow:'<i class="fa-solid fa-angle-right next"></i>',
