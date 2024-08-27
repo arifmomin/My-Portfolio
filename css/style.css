@@ -2502,7 +2502,6 @@ html {
     padding: 50px 0;
     background: var(--Background_color);
 }
-
 .contact_title_head {
     font-size: 18px;
     font-weight: 500;
@@ -2511,7 +2510,6 @@ html {
     text-align: center;
     margin-bottom: 15px;
 }
-
 .contact_title_summery {
     font-size: 36px;
     font-weight: 700;
@@ -2520,11 +2518,9 @@ html {
     text-align: center;
     margin-bottom: 100px;
 }
-
 .contact_title_summery span {
     color: var(--Brand_color);
 }
-
 .contact_left {
     max-width: 480px;
     padding: 30px;
@@ -2532,20 +2528,16 @@ html {
     box-shadow: var(--box_shadow);
     border-radius: 17px;
 }
-
 .contact_img {
     border-radius: 8px;
     overflow: hidden;
 }
-
 .contact_img img {
     transition: all linear .3s;
 }
-
 .contact_img img:hover {
     transform: scale(1.1);
 }
-
 .contact_head h3 {
     font-size: 28px;
     font-weight: 700;
@@ -2553,7 +2545,6 @@ html {
     color: #fff;
     margin-top: 35px;
 }
-
 .contact_head h4 {
     font-size: 18px;
     font-weight: 400;
@@ -2561,7 +2552,6 @@ html {
     color: var(--paragraph);
     margin-top: 10px;
 }
-
 .contact_head p {
     max-width: 375px;
     font-size: 16px;
@@ -2571,7 +2561,6 @@ html {
     margin: 30px 0 50px;
     line-height: 20px;
 }
-
 .contact_number h5 {
     font-size: 18px;
     font-weight: 400;
@@ -2579,7 +2568,6 @@ html {
     color: var(--paragraph);
     margin-top: 10px;
 }
-
 .contact_number h5 a {
     font-size: 18px;
     font-weight: 400;
@@ -2587,18 +2575,15 @@ html {
     color: #fff;
     transition: all linear .3s;
 }
-
 .contact_number h5 a:hover {
     color: var(--Brand_color);
 }
-
 .contact_icon {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 40px;
 }
-
 .contact_icon a i {
     font-size: 24px;
     color: #fff;
@@ -2612,13 +2597,11 @@ html {
     align-items: center;
     transition: all linear .3s;
 }
-
 .contact_icon a i:hover {
     color: var(--Brand_color);
     background: var(--liniar_gradiant);
     transform: scale(1.1);
 }
-
 #contactForm {
     height: 100%;
     padding: 30px;
@@ -2626,11 +2609,9 @@ html {
     box-shadow: var(--box_shadow);
     border-radius: 17px;
 }
-
 .name_box_col {
     display: inherit;
 }
-
 .name_box_col_heading {
     font-size: 16px;
     font-weight: 400;
@@ -2638,7 +2619,6 @@ html {
     color: var(--paragraph);
     margin-bottom: 15px;
 }
-
 .contact_input {
     font-size: 16px;
     font-weight: 400;
@@ -2652,11 +2632,9 @@ html {
     border-radius: 6px;
     transition: all linear .3s;
 }
-
 .contact_input:hover {
     border-color: var(--Brand_color);
 }
-
 #messase_box {
     width: 100%;
     height: 180px;
@@ -2669,11 +2647,9 @@ html {
     resize: none;
     transition: all linear .3s;
 }
-
 #messase_box:hover {
     border-color: var(--Brand_color);
 }
-
 .contact_button button {
     width: 100%;
     height: 55px;
@@ -2691,7 +2667,6 @@ html {
     border: none;
     transition: all linear .3s;
 }
-
 .contact_button button span {
     font-size: 16px;
     color: #fff;
